@@ -1,0 +1,56 @@
+---
+import { personal_info, social_links } from "@/config";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="flex flex-col pb-2">
+  <h1 class="self-center">{personal_info.name}</h1>
+
+  {personal_info.title && <h2 class=" self-center">{personal_info.title}</h2>}
+
+  <div class="flex flex-row gap-6 self-center mt-1 pb-2">
+    <a
+      href={personal_info.email.href}
+      target="_blank"
+      class="flex flex-row items-center gap-1"
+    >
+      <Icon name="mail" class="w-[1.1rem] h-[1.1rem]" />
+      <p>{personal_info.email.label}</p>
+    </a>
+    <div class="flex flex-row items-center gap-1">
+      <Icon name="location" class="w-[1.1rem] h-[1.1rem]" />
+      <p>{personal_info.location}</p>
+    </div>
+    {
+      personal_info.portfolio && (
+        <a
+          href={personal_info.portfolio.href}
+          target="_blank"
+          class="flex flex-row items-center gap-1"
+        >
+          <Icon name="portfolio" class="w-[1.1rem] h-[1.1rem]" />
+          <p>{personal_info.portfolio.label}</p>
+        </a>
+      )
+    }
+  </div>
+
+  {
+    social_links.length != 0 && (
+      <div class="flex flex-row gap-6 self-center ">
+        {social_links
+          .filter((social) => social.active)
+          .map((social) => (
+            <a
+              href={social.href}
+              target="_blank"
+              class="flex flex-row items-center gap-1"
+            >
+              <Icon name={social.icon} class="w-[1.1rem] h-[1.1rem]" />
+              {social.label}
+            </a>
+          ))}
+      </div>
+    )
+  }
+</div>

@@ -1,0 +1,10 @@
+---
+const { class: className } = Astro.props;
+---
+
+<hr
+  class:list={[
+    "border-t-2 rounded-xl border-dark break-after-avoid-page",
+    className,
+  ]}
+/>

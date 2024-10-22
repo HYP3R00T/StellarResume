@@ -1,0 +1,35 @@
+---
+import { skills_config } from "@/config";
+
+import HorizontalLine from "@/components/common/HorizontalLine.astro";
+---
+
+{
+  skills_config.visible && (
+    <HorizontalLine />
+    <div class="_skill_section flex flex-row py-2">
+      <div class="w-1/5">
+        <h5 class="">{skills_config.name}</h5>
+      </div>
+      <div class="_skill_cards w-4/5">
+        {skills_config.items.length != 0 &&
+          skills_config.items
+            .filter((item) => item.visible)
+            .map((item) => (
+              <div class="_skill_card flex flex-col pb-2 last:pb-2">
+                {item.category_name_visible && (
+                  <h5 class="_skill_title font-semibold">{item.category}</h5>
+                )}
+                  <p class="_skill_subtitle text-13px first:pl-0">{item.skills}</p>
+                </div>
+            ))}
+      </div>
+    </div>
+  )
+}
+
+<style is:global>
+  ._skill_card {
+    break-inside: avoid-page;
+  }
+</style>

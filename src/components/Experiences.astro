@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+
+import { experiences_config } from "@/config";
+import { type ExperiencesProps } from "@/utils/types";
+
+import ExperienceSummary from "@/components/ExperienceSummary.astro";
+import HorizontalLine from "@/components/common/HorizontalLine.astro";
+
+const experience: ExperiencesProps[] = await getCollection("experience");
+---
+
+{
+  experiences_config.visible && (
+    <HorizontalLine/>
+    <div class="_experience_section flex flex-row py-2">
+      <div class="_experience_section_name w-1/5">
+        <h5 class="">{experiences_config.name}</h5>
+      </div>
+      <div class="_experience_cards w-4/5">
+        {experience.map((item) => (
+          <div class="_experience_card pb-4 last:pb-2">
+            <div class="_experience_title flex flex-row items-center justify-between">
+              <a class="font-semibold" href={item.data.homepage} target="_blank">
+                <h5>{item.data.company}</h5>
+              </a>
+              <h5 class="text-sm">{item.data.date}</h5>
+            </div>
+            <div class="_experience_subtitle flex flex-row items-center justify-between">
+              <h5 class="italic text-sm">{item.data.position}</h5>
+              <h5 class="italic text-sm">{item.data.location}</h5>
+            </div>
+            <div class="_experience_summary">
+              <ExperienceSummary data={item} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+<style is:global>
+  ._experience_title {
+    break-after: avoid-page;
+  }
+
+  ._experience_subtitle {
+    break-before: avoid-page;
+    break-after: avoid-page;
+  }
+
+  ._experience_summary > div > ul > li:nth-child(1) {
+    break-before: avoid-page;
+  }
+</style>

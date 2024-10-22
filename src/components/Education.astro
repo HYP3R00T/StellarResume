@@ -1,0 +1,44 @@
+---
+import { education_config } from "@/config";
+
+import HorizontalLine from "@/components/common/HorizontalLine.astro";
+---
+
+{
+  education_config.visible && (
+    <HorizontalLine />
+    <div class="_education_section flex flex-row py-2">
+      <div class="_education_section_name w-1/5">
+        <h5 class="">{education_config.name}</h5>
+      </div>
+      <div class="_education_cards w-4/5">
+        {education_config.items
+          .filter((item) => item.visible)
+          .map((item) => (
+            <div class="_education_card pb-2 last:pb-2">
+              <div class="_education_title flex flex-row items-center justify-between">
+                <h5 class="font-semibold">
+                  {item.type_of_study} - {item.area_of_study}
+                </h5>
+                <h5 class="text-sm">{item.date_range}</h5>
+              </div>
+              <div class="_education_subtitle flex flex-row items-center justify-between">
+                <h5 class="italic text-sm">{item.institute}</h5>
+                <h5 class="font-semibold text-sm">{item.score}</h5>
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  )
+}
+
+<style is:global>
+  ._education_title {
+    break-after: avoid-page;
+  }
+
+  ._education_subtitle {
+    break-before: avoid-page;
+  }
+</style>
