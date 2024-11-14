@@ -13,6 +13,14 @@ export const personal_info: PersonalInfo = {
     label: "hyperoot.dev",
     href: "https://hyperoot.dev/",
   },
+  github: {
+    label: "HYP3R00T",
+    href: "https://github.com/HYP3R00T",
+  },
+  linkedin: {
+    label: "rajesh-kumar-das",
+    href: "https://www.linkedin.com/in/rajesh-kumar-das/",
+  },
 };
 
 export const social_links: SocialLinks[] = [
@@ -31,7 +39,7 @@ export const social_links: SocialLinks[] = [
 ];
 
 export const experiences_config: ExperiencesConfig = {
-  name: "Experiences",
+  name: "Experience",
   visible: true,
 };
 
@@ -46,10 +54,6 @@ export const education_config: EducationConfig = {
       area_of_study: "Physics",
       date_range: "Jul 2017 - May 2022",
       score: "8.72 CGPA",
-      website: {
-        label: "Credential ID: 2GFZ4Y7PH7VD",
-        href: "https://www.coursera.org/account/accomplishments/records/2GFZ4Y7PH7VD",
-      },
     },
     {
       visible: false,
@@ -58,16 +62,12 @@ export const education_config: EducationConfig = {
       area_of_study: "Science",
       date_range: "2015 - 2016",
       score: "75.4%",
-      website: {
-        label: "Credential ID: 2GFZ4Y7PH7VD",
-        href: "https://www.coursera.org/account/accomplishments/records/2GFZ4Y7PH7VD",
-      },
     },
   ],
 };
 
 export const projects_config = {
-  name: "Projects",
+  name: "Personal Projects",
   visible: true,
 };
 
@@ -85,7 +85,7 @@ export const skills_config = {
       visible: true,
       category: "Languages",
       category_name_visible: true,
-      skills: "Python, Bash, SQL, JavaScript, TypeScript, HTML5, CSS3, YAML",
+      skills: "Python, Bash, SQL, JavaScript, TypeScript, HTML5, CSS3, YAML, C/C++, Java",
     },
     {
       visible: true,
@@ -114,7 +114,7 @@ export const certifications_config = {
       url: "https://www.credly.com/badges/7aa530c7-9ae0-4f05-9766-9faee5ac98cc/public_url",
     },
     {
-      visible: true,
+      visible: false,
       name: "Introduction to Generative AI Learning Path",
       issuer: "Google Cloud",
       date: "Sep 2024",
@@ -129,36 +129,50 @@ export const certifications_config = {
     },
     {
       visible: true,
+      name: "Building Gen AI-Powered Applications with Python",
+      issuer: "IBM",
+      date: "Nov 2024",
+      url: "https://www.credly.com/badges/70adec8e-2321-423a-b13c-59f074556291/public_url",
+    },
+    {
+      visible: false,
+      name: "Open Source Software Development Methods",
+      issuer: "The Linux Foundation",
+      date: "Sep 2024",
+      url: "https://coursera.org/share/6ad04b1f72590f691503fab93f45cbb2",
+    },
+    {
+      visible: false,
       name: "Introduction to Agile Development and Scrum",
-      issuer: "IBM (Coursera)",
+      issuer: "IBM",
       date: "Apr 2024",
       url: "https://www.credly.com/badges/3bc12e55-8398-4d79-ab64-b569e7eb0858/public_url",
     },
     {
       visible: true,
       name: "DevOps Essentials",
-      issuer: "IBM (Coursera)",
+      issuer: "IBM",
       date: "Mar 2024",
       url: "https://www.credly.com/badges/868906dd-a866-41de-8cac-05f7245eb885/public_url",
     },
     {
-      visible: true,
+      visible: false,
       name: "Python for Data Science and AI",
-      issuer: "IBM (Coursera)",
+      issuer: "IBM",
       date: "Apr 2024",
       url: "https://www.credly.com/badges/678e8685-1559-4a48-a69a-4c3febb53fbd/public_url",
     },
     {
-      visible: true,
+      visible: false,
       name: "Linux Commands & Shell Scripting Essentials V2",
-      issuer: "IBM (Coursera)",
+      issuer: "IBM",
       date: "Aug 2024",
       url: "https://www.credly.com/badges/a870b95b-528f-4c14-b18b-c47bcbf82d7c/public_url",
     },
     {
-      visible: true,
+      visible: false,
       name: "Software Engineering Essentials",
-      issuer: "IBM (Coursera)",
+      issuer: "IBM",
       date: "Sep 2024",
       url: "https://www.credly.com/badges/f599cb4a-dbe5-4260-9706-edd4fb4cbec4/public_url",
     },

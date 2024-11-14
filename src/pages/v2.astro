@@ -1,0 +1,21 @@
+---
+import Base from "@/layouts/Base.astro";
+
+import PersonalInfo from "@/components/v2/PersonalInfo.astro";
+import Experiences from "@/components/v2/Experiences.astro";
+import Projects from "@/components/v2/Projects.astro";
+import Skills from "@/components/v2/Skills.astro";
+import Education from "@/components/v2/Education.astro";
+import Certifications from "@/components/v2/Certifications.astro";
+---
+
+<Base>
+  <div class="absolute h-a4-height w-a4-width bg-white z-40 p-[0.25in]">
+    <PersonalInfo />
+    <Education />
+    <Experiences />
+    <Projects />
+    <Certifications />
+    <Skills />
+  </div>
+</Base>

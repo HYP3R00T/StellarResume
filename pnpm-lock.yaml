@@ -17,7 +17,13 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.2
         version: 5.1.2(astro@4.16.7(@types/node@22.7.8)(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)
+      '@fontsource-variable/hanken-grotesk':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource-variable/noto-sans':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/source-sans-pro':
         specifier: ^5.1.0
         version: 5.1.0
       astro:
@@ -352,8 +358,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource-variable/hanken-grotesk@5.1.0':
+    resolution: {integrity: sha512-QD3pm2uu/4T7hWZylys1Ja9vlG+3VQKs/j7XvpecARlqJeVXgONoxY9zsrKeVI5B/6D3+xhu/XjOZhMHfzRghg==}
+
   '@fontsource-variable/noto-sans@5.1.0':
     resolution: {integrity: sha512-mLn33cgmryVFjpHoHy/lx6/DsRvp8kbxDmfMbMNl75eY+bVubad3u6oGSCyc8izcSNZAhAlXdoFW7mCnI2l63w==}
+
+  '@fontsource/source-sans-pro@5.1.0':
+    resolution: {integrity: sha512-GJijHmnPKwA1G8MqUVOZzbIW8jLBFsJGugAb5/IikvTHHmLp+pJy+g8EhyWbfR8pI04i/EStzW0AzOv0KQEhzg==}
 
   '@iconify/tools@4.0.7':
     resolution: {integrity: sha512-zOJxKIfZn96ZRGGvIWzDRLD9vb2CsxjcLuM+QIdvwWbv6SWhm49gECzUnd4d2P0sq9sfodT7yCNobWK8nvavxQ==}
@@ -2895,7 +2907,11 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
+  '@fontsource-variable/hanken-grotesk@5.1.0': {}
+
   '@fontsource-variable/noto-sans@5.1.0': {}
+
+  '@fontsource/source-sans-pro@5.1.0': {}
 
   '@iconify/tools@4.0.7':
     dependencies:

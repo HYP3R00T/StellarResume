@@ -1,19 +1,21 @@
 ---
-import Base from "@/layouts/Base.astro";
-
-import PersonalInfo from "@/components/PersonalInfo.astro";
-import Experiences from "@/components/Experiences.astro";
-import Projects from "@/components/Projects.astro";
-import Skills from "@/components/Skills.astro";
-import Education from "@/components/Education.astro";
-import Certifications from "@/components/Certifications.astro";
+import "@/styles/global.css";
+// Supports weights 100-900
+import "@fontsource-variable/noto-sans";
 ---
 
-<Base>
-  <PersonalInfo />
-  <Experiences />
-  <Projects />
-  <Skills />
-  <Education />
-  <Certifications />
-</Base>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>rajesh_kumar_das</title>
+  </head>
+  <body class="bg-slate-800 text-blue-300 flex justify-center">
+    <div class="flex flex-col">
+      <a href="/v1">v1</a>
+      <a href="/v2">v2</a>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,18 @@
 ---
 import "@/styles/global.css";
+
 // Supports weights 100-900
 import "@fontsource-variable/noto-sans";
+
+// Supports weights 100-900
+import "@fontsource-variable/hanken-grotesk";
+
+import "@fontsource/source-sans-pro/200.css";
+import "@fontsource/source-sans-pro/300.css";
+import "@fontsource/source-sans-pro/400.css";
+import "@fontsource/source-sans-pro/600.css";
+import "@fontsource/source-sans-pro/700.css";
+import "@fontsource/source-sans-pro/900.css";
 ---
 
 <html lang="en">
@@ -12,11 +23,10 @@ import "@fontsource-variable/noto-sans";
     <meta name="generator" content={Astro.generator} />
     <title>rajesh_kumar_das</title>
   </head>
-  <body>
+  <body class="bg-blue-200">
     <div class="flex justify-center">
-      <div class="max-w-a4">
-        <slot />
-      </div>
+      Hey
+      <slot />
     </div>
   </body>
 </html>

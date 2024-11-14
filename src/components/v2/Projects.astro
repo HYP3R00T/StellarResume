@@ -1,0 +1,70 @@
+---
+import { getCollection } from "astro:content";
+
+import { Icon } from "astro-icon/components";
+
+import { projects_config } from "@/config";
+import { type ProjectsProps } from "@/utils/types";
+
+import ProjectDescription from "@/components/v2/ProjectDescription.astro";
+import HorizontalLine from "@/components/common/HorizontalLine.astro";
+
+const project: ProjectsProps[] = await getCollection("project");
+---
+
+{
+  projects_config.visible && (
+    <div class="_project_section flex flex-col">
+      <div class="_project_section_name">
+        <h2 class="">{projects_config.name}</h2>
+        <HorizontalLine />
+      </div>
+      <div class="_project_cards flex flex-col pl-4 py-2 gap-2">
+        {project
+          .filter((item) => item.data.visible)
+          .map((item) => (
+            <div class="_project_card">
+              <div class="_project_title flex flex-row items-center justify-between">
+                <a
+                  href={item.data.homepage}
+                  target="_blank"
+                  class="flex flex-row items-center gap-1 font-semibold"
+                >
+                  <h3 class="">{item.data.title}</h3>
+                  <Icon
+                    name="arrow_up_right"
+                    class="w-[1.1rem] h-[1.1rem] pb-1"
+                  />
+                </a>
+                <a
+                  href={item.data.repository}
+                  target="_blank"
+                  class="flex flex-row items-center gap-1"
+                >
+                  <Icon name="github" class="w-[1.1rem] h-[1.1rem]" />
+                </a>
+              </div>
+              <div class="_project_summary">
+                <ProjectDescription data={item} />
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  )
+}
+
+<style is:global>
+  ._project_title {
+    break-after: avoid-page;
+  }
+
+  ._project_subtitle {
+    break-before: avoid-page;
+    break-after: avoid-page;
+  }
+
+  ._project_summary {
+    break-before: avoid-page;
+  }
+</style>

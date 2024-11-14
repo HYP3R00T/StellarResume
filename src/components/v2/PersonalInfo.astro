@@ -1,0 +1,58 @@
+---
+import { personal_info, social_links } from "@/config";
+import { Icon } from "astro-icon/components";
+import Button from "../common/Button.astro";
+---
+
+<div class="flex flex-col">
+  <h1 class="self-center font-bold">{personal_info.name}</h1>
+
+  {personal_info.title && <h2 class="">{personal_info.title}</h2>}
+
+  <div class="flex flex-row self-center gap-6 py-1">
+    <a
+      href={personal_info.email.href}
+      target="_blank"
+      class="flex flex-row items-center gap-1"
+    >
+      <Icon name="mail" class="" />
+      <p>{personal_info.email.label}</p>
+    </a>
+    {
+      personal_info.linkedin && (
+        <a
+          href={personal_info.linkedin.href}
+          target="_blank"
+          class="flex flex-row items-center gap-1"
+        >
+          <Icon name="linkedin" class="" />
+          <p>{personal_info.linkedin.label}</p>
+        </a>
+      )
+    }
+    {
+      personal_info.github && (
+        <a
+          href={personal_info.github.href}
+          target="_blank"
+          class="flex flex-row items-center gap-1"
+        >
+          <Icon name="github" class="" />
+          <p>{personal_info.github.label}</p>
+        </a>
+      )
+    }
+    {
+      personal_info.portfolio && (
+        <a
+          href={personal_info.portfolio.href}
+          target="_blank"
+          class="flex flex-row items-center gap-1"
+        >
+          <Icon name="portfolio" class="" />
+          <p>{personal_info.portfolio.label}</p>
+        </a>
+      )
+    }
+  </div>
+</div>

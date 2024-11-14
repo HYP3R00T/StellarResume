@@ -21,11 +21,24 @@ export default {
         a4: "210mm",
       },
       fontFamily: {
-        sans: ["Noto Sans Variable", ...defaultTheme.fontFamily.sans],
+        sans: [
+          "Hanken Grotesk Variable",
+          "Noto Sans Variable",
+          "Source Sans Pro",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       fontSize: {
-        "2xs": "0.625rem",
-        "13px": "13px",
+        title: ["30pt", { lineHeight: "1.2" }],
+        section: ["12pt", { lineHeight: "1.2" }],
+        heading: ["11pt", { lineHeight: "1.2" }],
+        // body: ["11pt"],
+        body: ["11pt", { lineHeight: "1.3" }],
+        minor: ["11pt", { lineHeight: "1.1" }],
+      },
+      spacing: {
+        "a4-width": "210mm",
+        "a4-height": "297mm",
       },
     },
   },

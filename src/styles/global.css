@@ -30,31 +30,23 @@
 }
 
 h1 {
-  @apply scroll-m-20 text-5xl font-semibold tracking-tight py-2;
+  @apply text-title;
 }
 
 h2 {
-  @apply scroll-m-20 text-3xl;
+  @apply text-section uppercase font-bold;
 }
 
 h3 {
-  @apply scroll-m-20 text-2xl;
+  @apply text-heading;
 }
 
 h4 {
-  @apply scroll-m-20 text-xl;
-}
-
-h5 {
-  @apply scroll-m-20;
-}
-
-h6 {
-  @apply scroll-m-20;
+  @apply text-minor;
 }
 
 p {
-  @apply scroll-m-20;
+  @apply text-body tracking-tight;
 }
 
 a {
@@ -62,5 +54,12 @@ a {
 }
 
 li {
-  @apply list-outside list-disc my-2;
+  @apply list-outside list-disc;
+}
+
+._experience_summary > div {
+  @apply text-body tracking-tight;
+}
+._project_summary > div {
+  @apply text-body tracking-tight;
 }

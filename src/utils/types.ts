@@ -40,6 +40,14 @@ export interface PersonalInfo {
     label: string;
     href: string;
   };
+  github?: {
+    label: string;
+    href: string;
+  };
+  linkedin?: {
+    label: string;
+    href: string;
+  };
 }
 
 export interface SocialLinks {
@@ -61,10 +69,6 @@ export type Education = {
   area_of_study: string;
   date_range: string;
   score: string;
-  website?: {
-    label: string;
-    href: string;
-  };
 };
 
 export type EducationConfig = {
