@@ -5,6 +5,5 @@ homepage: "https://celestialdocs.hyperoot.dev/"
 repository: "https://github.com/HYP3R00T/CelestialDocs"
 ---
 
-- A responsive documentation template using **Astro**, **TypeScript**, **Tailwind CSS**, and **Shadcn UI**.
-- Built fast **static site generation** for customizable colors, icons, and layout.
-- Set up **GitHub Actions** for automated **GitHub Pages** deployment, streamlining updates and accessibility.
+- Engineered a robust documentation platform using **Astro**, **TypeScript**, **Tailwind CSS**, and **Shadcn UI**, enhancing UX through scalable design and implementing advanced **technical documentation** workflows.
+- Leveraged **DevOps** principles with **GitHub Actions** to create automated, seamless deployment infrastructure for continuous integration and GitHub Pages hosting.

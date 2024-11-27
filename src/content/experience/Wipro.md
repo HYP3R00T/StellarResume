@@ -2,7 +2,7 @@
 company: "Wipro Ltd."
 homepage: "https://wipro.com"
 position: Project Engineer
-location: Remote
+location: Hyderabad
 date: May 2022 - Feb 2024
 ---
 

@@ -1,8 +1,23 @@
 {
   "markdownlint.config": {
     "MD033": {
-      "allowed_elements": ["iframe", "a", "h1", "p", "img"]
+      "allowed_elements": [
+        "iframe",
+        "a",
+        "h1",
+        "p",
+        "img"
+      ]
     },
     "MD041": false
-  }
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "hide-files.files": []
 }

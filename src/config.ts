@@ -67,7 +67,7 @@ export const education_config: EducationConfig = {
 };
 
 export const projects_config = {
-  name: "Personal Projects",
+  name: "Open Source Projects",
   visible: true,
 };
 
@@ -107,13 +107,6 @@ export const certifications_config = {
   visible: true,
   items: [
     {
-      visible: true,
-      name: "IT Automation with Python Professional Certificate",
-      issuer: "Google",
-      date: "Oct 2024",
-      url: "https://www.credly.com/badges/7aa530c7-9ae0-4f05-9766-9faee5ac98cc/public_url",
-    },
-    {
       visible: false,
       name: "Introduction to Generative AI Learning Path",
       issuer: "Google Cloud",
@@ -126,6 +119,13 @@ export const certifications_config = {
       issuer: "Microsoft",
       date: "Jul 2022",
       url: "https://www.credly.com/badges/be903c6e-bc08-4117-bb7e-942e5364e32b/public_url",
+    },
+    {
+      visible: true,
+      name: "IT Automation with Python Professional Certificate",
+      issuer: "Google",
+      date: "Oct 2024",
+      url: "https://www.credly.com/badges/7aa530c7-9ae0-4f05-9766-9faee5ac98cc/public_url",
     },
     {
       visible: true,
