@@ -1,5 +1,5 @@
 ---
-visible: True
+visible: False
 title: AnsiToolkit
 homepage: "https://ansitoolkit.hyperoot.dev/"
 repository: "https://github.com/HYP3R00T/AnsiToolkit"

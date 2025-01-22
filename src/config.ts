@@ -7,14 +7,14 @@ export const personal_info: PersonalInfo = {
     label: "rajesh@hyperoot.dev",
     href: "mailto:rajesh@hyperoot.dev",
   },
-  phone: "",
+  phone: "+91 8249578513",
   location: "Hyderabad, IN",
   portfolio: {
     label: "hyperoot.dev",
     href: "https://hyperoot.dev/",
   },
   github: {
-    label: "HYP3R00T",
+    label: "hyp3r00t",
     href: "https://github.com/HYP3R00T",
   },
   linkedin: {
@@ -52,7 +52,7 @@ export const education_config: EducationConfig = {
       institute: "National Institute of Technology, Surat",
       type_of_study: "Integrated Master of Science",
       area_of_study: "Physics",
-      date_range: "Jul 2017 - May 2022",
+      date_range: "2017 - 2022",
       score: "8.72 CGPA",
     },
     {
@@ -79,25 +79,27 @@ export const skills_config = {
       visible: false,
       category: "Languages",
       category_name_visible: false,
-      skills: "Python, Bash, SQL, JavaScript, TypeScript, HTML5, CSS3, YAML, FastAPI, pandas, numpy, AstroJS, ReactJS, Git, GitHub, Docker, Jenkins, Ansible, Linux, AWS, GCP, Azure, OpenShift",
-    },
-    {
-      visible: true,
-      category: "Languages",
-      category_name_visible: true,
-      skills: "Python, Bash, SQL, JavaScript, TypeScript, HTML5, CSS3, YAML, C/C++, Java",
-    },
-    {
-      visible: true,
-      category: "Frameworks & Libraries",
-      category_name_visible: true,
-      skills: "FastAPI, pandas, numpy, AstroJS, ReactJS",
+      skills:
+        "Python, Bash, SQL, JavaScript, TypeScript, HTML5, CSS3, YAML, FastAPI, pandas, numpy, AstroJS, ReactJS, Git, GitHub, Docker, Jenkins, Ansible, Linux, AWS, GCP, Azure, OpenShift",
     },
     {
       visible: true,
       category: "DevOps & Cloud",
       category_name_visible: true,
-      skills: "Git, GitHub, Docker, Jenkins, Ansible, Linux, AWS, GCP, Azure, OpenShift",
+      skills:
+        "Azure, AWS, Git, GitHub, Docker, Kubernetes, Jenkins, GitHub Actions, FluxCD, Ansible, Linux",
+    },
+    {
+      visible: true,
+      category: "Languages",
+      category_name_visible: true,
+      skills: "Python, Bash, SQL, HTML5, CSS3, JavaScript, TypeScript, YAML",
+    },
+    {
+      visible: false,
+      category: "Frameworks & Libraries",
+      category_name_visible: true,
+      skills: "FastAPI, Pandas, Numpy, AstroJS",
     },
   ],
 };
@@ -128,13 +130,6 @@ export const certifications_config = {
       url: "https://www.credly.com/badges/7aa530c7-9ae0-4f05-9766-9faee5ac98cc/public_url",
     },
     {
-      visible: true,
-      name: "Building Gen AI-Powered Applications with Python",
-      issuer: "IBM",
-      date: "Nov 2024",
-      url: "https://www.credly.com/badges/70adec8e-2321-423a-b13c-59f074556291/public_url",
-    },
-    {
       visible: false,
       name: "Open Source Software Development Methods",
       issuer: "The Linux Foundation",
@@ -163,7 +158,7 @@ export const certifications_config = {
       url: "https://www.credly.com/badges/678e8685-1559-4a48-a69a-4c3febb53fbd/public_url",
     },
     {
-      visible: false,
+      visible: true,
       name: "Linux Commands & Shell Scripting Essentials V2",
       issuer: "IBM",
       date: "Aug 2024",
@@ -175,6 +170,13 @@ export const certifications_config = {
       issuer: "IBM",
       date: "Sep 2024",
       url: "https://www.credly.com/badges/f599cb4a-dbe5-4260-9706-edd4fb4cbec4/public_url",
+    },
+    {
+      visible: true,
+      name: "Building Gen AI-Powered Applications with Python",
+      issuer: "IBM",
+      date: "Nov 2024",
+      url: "https://www.credly.com/badges/70adec8e-2321-423a-b13c-59f074556291/public_url",
     },
   ],
 };

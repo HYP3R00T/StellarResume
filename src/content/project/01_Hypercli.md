@@ -1,5 +1,5 @@
 ---
-visible: True
+visible: False
 title: Hypercli
 homepage: "https://hypercli.hyperoot.dev/"
 repository: "https://github.com/HYP3R00T/hypercli"

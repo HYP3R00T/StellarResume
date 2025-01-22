@@ -3,14 +3,12 @@ company: "Wipro Ltd."
 homepage: "https://wipro.com"
 position: Project Engineer
 location: Hyderabad
-date: May 2022 - Feb 2024
+date: 2022 - 2024
 ---
 
-- Leveraged **AWS** services, including **S3, EC2, AuroraDB, and Lambda**, to effectively manage and test applications in a cloud environment.
-- **Automated ETL testing** triggers using **Python** and **Boto3**, reducing manual tracking by **45 min per job** and enhancing process efficiency.
-- Implemented a major feature in the existing automation suite, eliminating manual effort in heterogeneous data validation, which **improved accuracy** and reduced testing time.
-- Consolidated and streamlined the **regression suite** for both homogenous and heterogeneous data validation, cutting regression testing time significantly and ensuring **data consistency**.
-- Enabled **containerized execution** of the automation suite via dedicated **CI/CD pipelines**, enhancing portability across environments (DEV, SYS) and increasing testing flexibility.
-- Developed and automated pipelines using **RedHat OpenShift**, enabling cross-team collaboration and reducing manual overhead in deployment and testing processes.
-- Collaborated with cross-functional teams to resolve integration issues, ensuring **seamless software delivery** and robust functionality.
-- Contributed to continuous improvement by optimizing **testing methodologies** and tools, driving efficiency across the QA process.
+
+- **Containerized the execution** of the automation suite using **Jenkins pipelines**, enabling seamless testing in temporary environments, reducing the cost and overhead of a dedicated Windows server.
+- Developed **CI/CD pipelines** to enable cross-team collaboration for automated testing; allowed teams to trigger test executions by pushing input files to **GitHub**, with results automatically sent to team members via email.
+- Automated integration testing processes by interacting with **AWS services** (S3, Lambda, EC2, Aurora) using **Boto3**, eliminating manual triggers and ensuring testing was performed in a specific, repeatable order.
+- Improved an existing automation framework by adding support for **heterogeneous SQL queries**, enabling the ability to interact with multiple databases simultaneously for integrated data testing.
+- Led the training of **eight team members** in **Python**, improving team skills and enabling better collaboration on automation tasks.

@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import { experiences_config } from "@/config";
 import { type ExperiencesProps } from "@/utils/types";
 
-import ExperienceSummary from "@/components/v1/ExperienceSummary.astro";
+import ExperienceSummary from "@/components/v2/ExperienceSummary.astro";
 import HorizontalLine from "@/components/common/HorizontalLine.astro";
 
 const experience: ExperiencesProps[] = await getCollection("experience");
@@ -12,25 +12,28 @@ const experience: ExperiencesProps[] = await getCollection("experience");
 
 {
   experiences_config.visible && (
-    <HorizontalLine/>
-    <div class="_experience_section flex flex-row py-2">
-      <div class="_experience_section_name w-1/5">
-        <h5 class="">{experiences_config.name}</h5>
+    <div class="_experience_section flex flex-col py-1">
+      <div class="_experience_section_name">
+        <h2 class="">{experiences_config.name}</h2>
+        <HorizontalLine />
       </div>
-      <div class="_experience_cards w-4/5">
+      <div class="_experience_cards flex flex-col py-2 gap-2">
         {experience.map((item) => (
-          <div class="_experience_card pb-4 last:pb-2">
+          <div class="_experience_card last:pb-1">
             <div class="_experience_title flex flex-row items-center justify-between">
-              <a class="font-semibold" href={item.data.homepage} target="_blank">
-                <h5>{item.data.company}</h5>
+              <a
+                class="font-semibold"
+                href={item.data.homepage}
+                target="_blank"
+              >
+                <h3>{item.data.company}</h3>
               </a>
-              <h5 class="text-sm">{item.data.date}</h5>
+              <h3 class="text-sm">{item.data.date}</h3>
             </div>
             <div class="_experience_subtitle flex flex-row items-center justify-between">
-              <h5 class="italic text-sm">{item.data.position}</h5>
-              <h5 class="italic text-sm">{item.data.location}</h5>
+              <h4 class="">{item.data.position}</h4>
             </div>
-            <div class="_experience_summary">
+            <div class="_experience_summary pt-4">
               <ExperienceSummary data={item} />
             </div>
           </div>
@@ -52,5 +55,13 @@ const experience: ExperiencesProps[] = await getCollection("experience");
 
   ._experience_summary > div > ul > li:nth-child(1) {
     break-before: avoid-page;
+  }
+
+  ._experience_summary > div {
+    @apply text-body tracking-normal;
+  }
+
+  ._experience_summary > div > ul {
+    @apply flex flex-col gap-1;
   }
 </style>

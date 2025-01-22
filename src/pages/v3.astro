@@ -1,0 +1,35 @@
+---
+import Base from "@/layouts/Base.astro";
+
+import PersonalInfo from "@/components/v3/PersonalInfo.astro";
+import Summary from "@/components/v3/Summary.astro";
+import Experiences from "@/components/v3/Experiences.astro";
+import Projects from "@/components/v3/Projects.astro";
+import Skills from "@/components/v3/Skills.astro";
+import Education from "@/components/v3/Education.astro";
+import Certifications from "@/components/v3/Certifications.astro";
+---
+
+<Base>
+  <div
+    class="absolute h-a4-height w-a4-width bg-white z-40 p-[0.25in] flex flex-col gap-2"
+  >
+    <div class="flex flex-col gap-2">
+      <div class="p-4 border rounded-lg bg-lighter border-lighter">
+        <PersonalInfo />
+      </div>
+      <Summary />
+    </div>
+    <div class="flex flex-row gap-4 flex-1">
+      <div class="w-3/5 py-4">
+        <Education />
+        <Experiences />
+        <Certifications />
+      </div>
+      <div class="w-2/5 p-4 rounded-lg bg-lighter">
+        <Projects />
+        <Skills />
+      </div>
+    </div>
+  </div>
+</Base>

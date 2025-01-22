@@ -57,9 +57,4 @@ li {
   @apply list-outside list-disc;
 }
 
-._experience_summary > div {
-  @apply text-body tracking-tight;
-}
-._project_summary > div {
-  @apply text-body tracking-tight;
-}
+

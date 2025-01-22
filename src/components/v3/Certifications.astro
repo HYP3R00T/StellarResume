@@ -1,0 +1,56 @@
+---
+import { Icon } from "astro-icon/components";
+
+import { certifications_config } from "@/config";
+
+import HorizontalLine from "@/components/common/HorizontalLine.astro";
+---
+
+{
+  certifications_config.visible && (
+    <div class="_certification_section flex flex-col py-1">
+      <div class="_certification_section_name">
+        <h2>{certifications_config.name}</h2>
+        <HorizontalLine class:list="horizontal_line" />
+      </div>
+      <div class="_certification_cards flex flex-wrap py-2 gap-2">
+        {certifications_config.items
+          .filter((item) => item.visible)
+          .map((item) => (
+            <div class="_certification_card last:pb-1">
+              <div class="_certification_title flex flex-row items-center">
+                <a
+                  href={item.url}
+                  target="_blank"
+                  class="flex flex-row items-center gap-1"
+                >
+                  <h3 class="font-semibold">{item.name}</h3>
+                  <Icon
+                    name="arrow_up_right"
+                    class="w-[1.1rem] h-[1.1rem] pb-1"
+                  />
+                </a>
+              </div>
+              <div class="_certification_subtitle flex flex-row items-center">
+                <h4>{item.issuer}</h4>
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  )
+}
+
+<style is:global>
+  ._certification_card {
+    break-inside: avoid;
+  }
+
+  ._certification_title {
+    break-after: avoid-page;
+  }
+
+  ._certification_subtitle {
+    break-before: avoid-page;
+  }
+</style>
