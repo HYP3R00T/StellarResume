@@ -1,7 +1,7 @@
 ---
 visible: True
 title: Dotfiles
-homepage: "https://github.com/HYP3R00T/.dotfiles"
+homepage: "https://dotfiles.hyperoot.dev/"
 repository: "https://github.com/HYP3R00T/.dotfiles"
 ---
 
